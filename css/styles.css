@@ -898,7 +898,13 @@ header .container {
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
   cursor: pointer;
+  transition: border-color var(--time-hov-fok--) var(--cubic-bezier--);
+}
+
+.form-field-input:focus {
+  border-color: var(--accent-color);
 }
 
 .form-input-div {
@@ -910,12 +916,11 @@ header .container {
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-  fill: currentColor;
+  transition: fill var(--time-hov-fok--) var(--cubic-bezier--);
 }
 
-.form-input-div:hover {
-  color: var(--accent-color);
-  border: 3px solid var(--accent-color);
+.form-field-input:focus + .form-input-icon {
+  fill: var(--accent-color);
 }
 
 .form-field textarea {
