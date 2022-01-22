@@ -877,13 +877,12 @@ header .container {
 }
 
 .form-field {
-  position: relative;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.form-field label {
+.form-text {
   font-weight: 400;
   font-size: 12px;
   line-height: calc(14 / 12);
@@ -892,19 +891,31 @@ header .container {
   margin-bottom: 4px;
 }
 
-.form-field input {
+.form-field-input {
   width: 100%;
   height: 40px;
   padding: 11px 12px;
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-input-div {
+  position: relative;
 }
 
 .form-input-icon {
   position: absolute;
   top: 50%;
   left: 12px;
+  transform: translateY(-50%);
+  fill: currentColor;
+}
+
+.form-input-div:hover {
+  color: var(--accent-color);
+  border: 3px solid var(--accent-color);
 }
 
 .form-field textarea {
